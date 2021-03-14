@@ -25,3 +25,32 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.cell-container {
+  width: 65px;
+  height:  65px;
+  border:  1px solid grey;
+  display:  flex;
+  justify-content:  center ;
+}
+
+.cell-container input {
+  width: 65px;
+  height:  65px;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

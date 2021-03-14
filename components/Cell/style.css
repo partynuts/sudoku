@@ -1,0 +1,13 @@
+.cell-container {
+  width: 65px;
+  height:  65px;
+  border:  1px solid grey;
+  display:  flex;
+  justify-content:  center ;
+}
+
+.cell-container input {
+    width: 65px;
+    height:  65px;
+    border: none
+}

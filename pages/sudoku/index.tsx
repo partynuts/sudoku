@@ -17,7 +17,11 @@ export default function Sudoku() {
       <div>
         <GameField game={game}/>
       </div>
+        <button onClick={e => {validateResult(e, game)}}>Submit</button>
     </Layout>
   )
 }
 
+function validateResult(e: any, game: Game) {
+
+}
