@@ -1,6 +1,7 @@
 import {Game} from "../../game";
 import {Cell} from "../../cell";
 import {checkIfAllFieldsAreFilled, validateGame} from "../gameValidator";
+import {invalidWholeGame, validWholeGame} from "./fixtures/game";
 
 describe('gameValidator', () => {
     describe('checkIfAllFieldsAreFilled', () => {
@@ -19,7 +20,10 @@ describe('gameValidator', () => {
 
     describe('validateGame', () => {
         it('should return true in success case', () => {
-            expect(validateGame(new Game([]))).toBeTruthy();
+            expect(validateGame(validWholeGame)).toBeTruthy();
+        });
+        it('should return false in failure case', () => {
+            expect(validateGame(invalidWholeGame)).toBeFalsy();
         });
     });
 });
