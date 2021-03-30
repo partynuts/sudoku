@@ -43,6 +43,10 @@ img {
   font-size: 18px;
 }
 
+.active-field {
+  border: 1px solid greenyellow;
+}
+
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

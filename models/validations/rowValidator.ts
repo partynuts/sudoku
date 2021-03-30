@@ -2,8 +2,9 @@ import {Game} from "../game";
 
 export function checkRowForUniqueness(game: Game, row: number) {
     const rowData = extractRow(game, row);
-    const uniqueNumbers = new Set(rowData.map(cell => cell.number));
-    return uniqueNumbers.size === rowData.length
+    const onlyNumbers = rowData.map(cell => cell.number).filter(el => el);
+    const uniqueNumbers = new Set(onlyNumbers);
+    return uniqueNumbers.size === onlyNumbers.length
 }
 
 export function extractRow(game: Game, row: number) {
@@ -23,7 +24,7 @@ export function extractRow(game: Game, row: number) {
     const config = map[row-1];
 
     for(let i = config.i; i <= config.i + 2; i++) {
-        for(let j = config.j;j <= config.j + 2; j++) {
+        for(let j = config.j; j <= config.j + 2; j++) {
             rowData.push(game.data[i][j]);
         }
     }

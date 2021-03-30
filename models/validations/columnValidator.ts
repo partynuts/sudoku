@@ -2,8 +2,9 @@ import {Game} from "../game";
 
 export function checkColumnForUniqueness(game: Game, column: number) {
     const columnData = extractColumn(game, column);
-    const uniqueNumbers = new Set(columnData.map(cell => cell.number));
-    return uniqueNumbers.size === columnData.length
+    const onlyNumbers = columnData.map(cell => cell.number).filter(el => el)
+    const uniqueNumbers = new Set(onlyNumbers);
+    return uniqueNumbers.size === onlyNumbers.length
 }
 
 export function extractColumn(game: Game, column: number) {
